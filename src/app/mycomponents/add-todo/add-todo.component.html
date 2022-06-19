@@ -1,0 +1,15 @@
+<div class="container my-3">
+  <h4>ADD A TODO</h4>
+  <form (ngsubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="title" class="form-label">TODO TITLE</label>
+      <input type="text" [(ngModel)]="title" class="form-control" name="title" id="title">
+    </div>
+    <div class="mb-3">
+      <label for="desc" class="form-label">TODO DESCRIPTION</label>
+      <input type="text" class="form-control" [(ngModel)]="desc"  name="desc" id="desc">
+    </div>
+    <button type="submit" class="btn btn-primary">ADD TODO</button>
+  </form>
+
+</div>
