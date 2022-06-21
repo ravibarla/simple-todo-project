@@ -10,12 +10,12 @@ export class TodosComponent implements OnInit {
 
   todos!: Todo[];
   constructor() {
-    if(localStorage.getItem("todos")==null){
-      this.todos=[]
-    }
-    else{
-      this.todos=JSON.parse("todos");
-    }
+    const localItem=localStorage.getItem("todos");
+    if(localItem===null){
+   this.todos=[];
+  }else{
+    this.todos=JSON.parse(localItem);
+  }
    }
 
   ngOnInit(): void {
